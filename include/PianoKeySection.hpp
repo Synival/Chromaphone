@@ -1,3 +1,7 @@
+// PianoKeySection.hpp
+// -------------------
+// A physical portion of a PianoKey which corresponds to a specific frequency range.
+
 #ifndef PITCH_QT_PIANOKEYSECTION_HPP_INCLUDED
 #define PITCH_QT_PIANOKEYSECTION_HPP_INCLUDED
 
@@ -9,8 +13,10 @@
 
 #include "PianoConstants.hpp"
 
+// Forward declarations
 class PianoKey;
 
+// A physical portion of a PianoKey which corresponds to a specific frequency range.
 class PianoKeySection {
 public:
     PianoKeySection(PianoKey &key, const sectionRange_t &range);

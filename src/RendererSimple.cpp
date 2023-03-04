@@ -1,3 +1,7 @@
+// RendererSimple.cpp
+// ------------------
+// Renderer for LFT results in a simple graph format.
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QWidget>

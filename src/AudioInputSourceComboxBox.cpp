@@ -1,3 +1,7 @@
+// AudioInputSourceSelection.cpp
+// -----------------------------
+// QComboBox-derived class for selecting an audio input source.
+
 #include <stdexcept>
 
 #pragma GCC diagnostic push

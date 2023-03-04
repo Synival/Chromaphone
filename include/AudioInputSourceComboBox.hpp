@@ -1,3 +1,7 @@
+// AudioInputSourceSelection.hpp
+// -----------------------------
+// QComboBox-derived class for selecting an audio input source.
+
 #ifndef PITCH_QT_LOG_AUDIOINPUTSOURCECOMBOBOX_HPP_INCLUDED
 #define PITCH_QT_LOG_AUDIOINPUTSOURCECOMBOBOX_HPP_INCLUDED
 
@@ -9,6 +13,7 @@
 #include <QMediaDevices>
 #pragma GCC diagnostic pop
 
+// Forward declarations
 class QAudioDevice;
 
 // Different types of selection items in our selection combo box

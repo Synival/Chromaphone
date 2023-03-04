@@ -1,11 +1,17 @@
+// PianoPitch.hpp
+// --------------
+// Frequency data for a pitch contained in a Piano. Used to construct PianoKey's.
+
 #ifndef PITCH_QT_PIANOPITCH_HPP_INCLUDED
 #define PITCH_QT_PIANOPITCH_HPP_INCLUDED
 
 #include "PianoConstants.hpp"
 
+// Forward declarations
 class Piano;
 class PianoPitchClass;
 
+// Frequency and MIDI data which corresponds to an individual key on a piano.
 class PianoPitch {
 public:
     PianoPitch(Piano &piano, int pitchIndex) :
@@ -13,8 +19,7 @@ public:
         _pitchIndex(pitchIndex),
         _midiPitch(pitchIndex + LOW_PITCH),
         _pitchClassIndex(_midiPitch % MAX_PITCH_CLASSES),
-        _freq(std::pow(2.00, (double) _pitchIndex / (double) MAX_PITCH_CLASSES) * LOW_PITCH_FREQ),
-        _dim(((double) _midiPitch / (double) MAX_PITCHES) * 0.125 + 0.125)
+        _freq(std::pow(2.00, (double) _pitchIndex / (double) MAX_PITCH_CLASSES) * LOW_PITCH_FREQ)
     {}
 
     inline int getMidiPitch() const
@@ -27,11 +32,10 @@ public:
 
 private:
     Piano &_piano;
-    [[maybe_unused]] const int _pitchIndex;
+    const int _pitchIndex;
     const int _midiPitch;
     const int _pitchClassIndex;
     const double _freq;
-    [[maybe_unused]] const double _dim;
 };
 
 #endif // PITCH_QT_PIANOPITCH_HPP_INCLUDED

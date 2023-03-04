@@ -1,3 +1,7 @@
+// PianoKey.cpp
+// ------------
+// An individual key used in the Piano class.
+
 #include <cmath>
 
 #pragma GCC diagnostic push

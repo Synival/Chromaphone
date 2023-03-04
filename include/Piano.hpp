@@ -1,3 +1,7 @@
+// Piano.hpp
+// ---------
+// Implementation of a piano for any visualizer that would like one.
+
 #ifndef PITCH_QT_PIANO_HPP_INCLUDED
 #define PITCH_QT_PIANO_HPP_INCLUDED
 
@@ -11,9 +15,11 @@
 #include "PianoPitch.hpp"
 #include "PianoKey.hpp"
 
+// Forward declarations
 class QPainter;
 class log_transform_stats;
 
+// Constructs a piano which can render itself to a QPainter.
 class Piano {
 public:
     Piano();

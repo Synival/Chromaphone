@@ -1,3 +1,7 @@
+// RendererPiano.cpp
+// -----------------
+// Renderer for LFT results which draws a piano with pretty colors and highlights.
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QWidget>

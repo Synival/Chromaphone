@@ -1,3 +1,7 @@
+// MainWindow.cpp
+// --------------
+// The main window created at application launch.
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QtMultimedia/QAudioFormat>

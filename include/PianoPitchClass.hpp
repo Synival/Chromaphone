@@ -1,3 +1,7 @@
+// PianoPitchClass.hpp
+// -------------------
+// Data for a class of pitch (e.g, C, C#, D, etc.) for a piano.
+
 #ifndef PITCH_QT_PIANOPITCHCLASS_HPP_INCLUDED
 #define PITCH_QT_PIANOPITCHCLASS_HPP_INCLUDED
 
@@ -8,6 +12,7 @@
 
 #include "PianoConstants.hpp"
 
+// Forward declarations
 class Piano;
 
 enum class PianoPitchClassPosition {
@@ -15,6 +20,7 @@ enum class PianoPitchClassPosition {
     Lower = 1
 };
 
+// Data for a class of pitch (e.g, C, C#, D, etc.) for a piano.
 class PianoPitchClass {
 public:
     PianoPitchClass(
@@ -46,7 +52,7 @@ public:
         { return _pos == PianoPitchClassPosition::Lower; }
 
 private:
-    [[maybe_unused]] Piano &_piano;
+    Piano &_piano;
     const int _pitchClassIndex;
     const PianoPitchClassPosition _pos;
     const int _width;

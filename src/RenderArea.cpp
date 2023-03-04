@@ -1,3 +1,7 @@
+// RenderArea.cpp
+// --------------
+// A widget which renders LFT results using a Renderer of choice.
+
 #include <iostream>
 #include <chrono>
 

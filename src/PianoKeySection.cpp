@@ -1,3 +1,7 @@
+// PianoKeySection.cpp
+// -------------------
+// A physical portion of a PianoKey which corresponds to a specific frequency range.
+
 #include <cmath>
 
 #pragma GCC diagnostic push

@@ -1,12 +1,13 @@
+// Piano.cpp
+// ---------
+// Implementation of a piano for any visualizer that would like one.
+
 #include <cmath>
 #include <algorithm>
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QPainter>
-//#include <QPainterPath>
-//#include <QColor>
-//#include <QBrush>
 #pragma GCC diagnostic pop
 
 #include "../lft/api/log_transform_stats.hpp"

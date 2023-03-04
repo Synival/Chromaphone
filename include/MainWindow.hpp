@@ -1,3 +1,7 @@
+// MainWindow.hpp
+// --------------
+// The main window created at application launch.
+
 #ifndef PITCH_QT_MAINWINDOW_HPP_INCLUDED
 #define PITCH_QT_MAINWINDOW_HPP_INCLUDED
 
@@ -12,6 +16,7 @@
 
 #include "Lft.hpp"
 
+// Forward declarations
 namespace Ui {
     class MainWindow;
 }
@@ -25,6 +30,7 @@ class log_transformer_filter_i;
 template<typename T>
 class transform_results;
 
+// The main window created at application launch.
 class MainWindow : public QMainWindow
 {
     Q_OBJECT

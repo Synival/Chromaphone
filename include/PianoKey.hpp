@@ -1,3 +1,7 @@
+// PianoKey.hpp
+// ------------
+// An individual key used in the Piano class.
+
 #ifndef PITCH_QT_PIANOKEY_HPP_INCLUDED
 #define PITCH_QT_PIANOKEY_HPP_INCLUDED
 
@@ -9,6 +13,7 @@
 #include "PianoPitchClass.hpp"
 #include "PianoKeySection.hpp"
 
+// Forward declarations
 class QPainter;
 class QRect;
 class Piano;
@@ -16,6 +21,7 @@ class PianoPitch;
 class PianoPitchClass;
 class PianoKeySection;
 
+// Representation of a single physical key in a Piano class.
 class PianoKey {
 public:
     PianoKey(Piano &piano, int index, int x) :

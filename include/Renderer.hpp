@@ -1,3 +1,7 @@
+// Renderer.hpp
+// ------------
+// Base class for any kind of renderer to be used with a RenderArea.
+
 #ifndef PITCH_QT_RENDERER_HPP_INCLUDED
 #define PITCH_QT_RENDERER_HPP_INCLUDED
 
@@ -7,8 +11,10 @@
 
 #include "../lft/api/log_transformer_renderer_i.hpp"
 
+// Forward declarations
 class QPainter;
 
+// Base class for any kind of renderer to be used with a RenderArea.
 class Renderer : public log_transformer_renderer_i
 {
 public:

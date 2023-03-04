@@ -1,3 +1,7 @@
+// RendererPiano.hpp
+// -----------------
+// Renderer for LFT results which draws a piano with pretty colors and highlights.
+
 #ifndef PITCH_QT_RENDERER_PIANO_HPP_INCLUDED
 #define PITCH_QT_RENDERER_PIANO_HPP_INCLUDED
 
@@ -7,9 +11,11 @@
 
 #include "Piano.hpp"
 
+// Forward declarations
 class QWidget;
 class QPainter;
 
+// Renderer for LFT results which draws a piano with pretty colors and highlights.
 class RendererPiano : public Renderer {
 private:
 
@@ -21,7 +27,7 @@ public:
 private:
     virtual void onSetStats(const log_transform_stats &stats) override;
 
-    [[maybe_unused]] QWidget &_widget;
+    QWidget &_widget;
     Piano _piano;
 };
 

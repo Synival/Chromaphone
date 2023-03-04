@@ -1,3 +1,7 @@
+// Lft.cpp
+// -------
+// Interface for using the LFT library.
+
 #include <QtDebug>
 
 #include "../lft/api/signal_profile.hpp"

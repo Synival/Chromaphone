@@ -1,3 +1,7 @@
+// Lft.hpp
+// -------
+// Interface for using the LFT library.
+
 #ifndef PITCH_QT_LFT_HPP_INCLUDED
 #define PITCH_QT_LFT_HPP_INCLUDED
 
@@ -9,6 +13,7 @@
 #include <QAudioFormat>
 #pragma GCC diagnostic pop
 
+// Forward declarations
 class signal_profile;
 class signal_data_i;
 class log_transformer_filter_i;

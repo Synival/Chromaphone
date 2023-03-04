@@ -1,3 +1,7 @@
+// main.cpp
+// --------
+// Application entry point.
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QApplication>
@@ -14,6 +18,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
 #ifdef ANDROID
+    // Prevent the devices from going to sleep.
     QNativeInterface::QAndroidApplication::runOnAndroidMainThread([]() {
         QJniObject activity = QNativeInterface::QAndroidApplication::context();
         QJniObject window = activity.callObjectMethod("getWindow", "()Landroid/view/Window;");
@@ -28,8 +33,10 @@ int main(int argc, char *argv[])
     });
 #endif
 
+    // Create our main window.
     MainWindow window;
     window.show();
 
+    // Run!
     return app.exec();
 }

@@ -1,3 +1,7 @@
+// PianoConstants.hpp
+// ------------------
+// Default parameters for the Piano class and its child classes.
+
 #ifndef PITCH_QT_PIANOCONSTANTS_HPP_INCLUDED
 #define PITCH_QT_PIANOCONSTANTS_HPP_INCLUDED
 

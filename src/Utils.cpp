@@ -1,3 +1,7 @@
+// Utils.hpp
+// ---------
+// Handy utility functions that can be used anywhere.
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QColor>

@@ -1,10 +1,16 @@
+// RendererSimple.hpp
+// ------------------
+// Renderer for LFT results in a simple graph format.
+
 #ifndef PITCH_QT_RENDERER_SIMPLE_HPP_INCLUDED
 #define PITCH_QT_RENDERER_SIMPLE_HPP_INCLUDED
 
 #include "Renderer.hpp"
 
+// Forward declarations
 class QWidget;
 
+// Renderer for LFT results in a simple graph format.
 class RendererSimple : public Renderer {
 public:
     RendererSimple(QWidget &widget);

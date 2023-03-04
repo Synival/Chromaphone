@@ -1,3 +1,7 @@
+// PianoPitch.hpp
+// --------------
+// Frequency data for a pitch contained in a Piano. Used to construct PianoKey's.
+
 #include "Piano.hpp"
 
 #include "PianoPitch.hpp"

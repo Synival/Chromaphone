@@ -1,3 +1,7 @@
+// RenderArea.hpp
+// --------------
+// A widget which renders LFT results using a Renderer of choice.
+
 #ifndef PITCH_QT_RENDER_AREA_HPP_INCLUDED
 #define PITCH_QT_RENDER_AREA_HPP_INCLUDED
 
@@ -14,12 +18,14 @@
 #include "../lft/api/transform_results.hpp"
 #include "../lft/api/log_transform_stats.hpp"
 
+// Forward declarations
 class Renderer;
 
 namespace Ui {
     class RenderArea;
 }
 
+// A widget which renders LFT results using a Renderer of choice.
 class RenderArea : public QWidget /*QOpenGLWidget*/ {
     Q_OBJECT
 
