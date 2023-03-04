@@ -41,6 +41,8 @@ Open "Chromaphone.pro" is Qt Creator:
 
 The background color is determined by mixing all notes heard together, weighted by their intensity. Every individual tone color is also skewed slightly toward the background color to give a better impression of the entire chord. For example: C Major traids tend to have a shimmering gold color, comprised of oranges and yellows, while a Gb Major triad is a deep blueish-purple. Pretty!
 
+Fun fact: Due to the way the background/overall color is mixed, chords or sets of pitches that have no clear tonal center appear white or desaturated. This applies to tritones, augmented triads, fully-diminished 7 chords, percussion, and (not always) speech.
+
 **Q. Why does it show so many extra notes?**
 
 **A.** What you're seeing are the *harmonics* produced by the instruments Chromaphone is picking up. Depending on the timbre of the instrument, the fundamental pitch (i.e, the "played" note) may be more or less difficult to discern. A simple sine wave will show a single pitch in Chromaphone, while a cello may show many more pitches  than you would expect due to its rich timbre.
