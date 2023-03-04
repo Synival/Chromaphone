@@ -13,11 +13,11 @@ Video - Android version (old as of 2023-03-04):
 
 # What is Chromaphone?
 
-Chromaphone is a visualizer that displays notes read from a microphone or other audio input on a piano keyboard. It has two goals: to be a useful tool for musicians to analyse music, and to enhance your musical experience by adding pretty visuals. Unlike other visualization software, Chromaphone aims for *accuracy* above all else. You should be able to transcribe music using Chromaphone.
+Chromaphone is a visualizer that displays individual pitches heard from a microphone or other audio input source onto a piano keyboard. It has two goals: to be a useful tool for musicians to analyse music, and to enhance your musical experience by adding pretty visuals. Unlike other visualization software, Chromaphone aims for *pitch accuracy* above all else. You should be able to transcribe music using Chromaphone.
 
 # How can I use it?
 
-Follow the build instructions, run it, and select your audio input device using the dropdown menu. It will update automatically when the default device is changed or the device list is updated. If the input signal isn't strong enough, you can give it a boost using the "Sensitivity" slider on the left side.
+Follow the build instructions, run it, and select your audio input source using the dropdown menu. The dropdown menu will update automatically when the default device is changed or the device list is updated. If the input signal isn't strong enough, you can give it a boost using the "Sensitivity" slider in the lower-left corner.
 
 # Build instructions
 Chromaphone has only been built in the Windows environment using Qt Creator (version 9.0.1). To build, please install the following:
@@ -37,15 +37,15 @@ Open "Chromaphone.pro" is Qt Creator:
 
 **Q. How do the colors work?**
 
-**A.** Each pitch class (C, C#, D, etc.) is assigned a color going around the color wheel along the circle of 5ths, starting with red. So, C is red, G is orange, D is yellow, and so on. If a note is out of tune, it is desaturated; quarter-step sharp or flat notes are completely white.
+**A.** Each *pitch class* (C, C#, D, etc.) is assigned a hue, rotating around the color wheel along the circle of 5ths, starting with C as **red**. In other words: C is red, G is orange, D is yellow, and so on. If a note is out of tune, it is desaturated; quarter-step sharp/flat notes are completely white.
 
-An overall color is determined by mixing all notes together, weighted by their intensity. This is shown as a subtle background color. It also shifts every other color slightly towards this color to give an impression that the entire chord has a color. A C Major traid, for example, tends to have a shimmering gold color, made of oranges and yellows, while a Gb Major triad is a deep blueish-purple. Neat!
+The background color is determined by mixing all notes heard together, weighted by their intensity. Every individual tone color is also skewed slightly toward the background color to give a better impression of the entire chord. For example: C Major traids tend to have a shimmering gold color, comprised of oranges and yellows, while a Gb Major triad is a deep blueish-purple. Pretty!
 
 **Q. Why does it show so many extra notes?**
 
-**A.** What you're seeing are the *harmonics* produced by the instruments Chromaphone is picking up. Depending on the timbre of the instrument, the fundamental tone (i.e, the "real" tone) of the note may be more or less difficult to see. A simple sine wave should show a single note in Chromaphone, while a cello may show many more tones than you'd expect due to its rich timbre.
+**A.** What you're seeing are the *harmonics* produced by the instruments Chromaphone is picking up. Depending on the timbre of the instrument, the fundamental pitch (i.e, the "played" note) may be more or less difficult to discern. A simple sine wave will show a single pitch in Chromaphone, while a cello may show many more pitches  than you would expect due to its rich timbre.
 
-**Q. You know what would be cool? If it could --**
+**Q. You know what would be cool? If it could-**
 
 **A.** Stop. There a *a million things* that would be cool. If you'd like to see more features in Chromaphone, you'll more than welcome to contribute!
 
