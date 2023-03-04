@@ -45,7 +45,7 @@ An overall color is determined by mixing all notes together, weighted by their i
 
 **A.** What you're seeing are the *harmonics* produced by the instruments Chromaphone is picking up. Depending on the timbre of the instrument, the fundamental tone (i.e, the "real" tone) of the note may be more or less difficult to see. A simple sine wave should show a single note in Chromaphone, while a cello may show many more tones than you'd expect due to its rich timbre.
 
-**Q. You know what would be cool? If you-**
+**Q. You know what would be cool? If it could --**
 
 **A.** Stop. There a *a million things* that would be cool. If you'd like to see more features in Chromaphone, you'll more than welcome to contribute!
 
