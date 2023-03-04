@@ -1,6 +1,10 @@
 # Chromaphone
 A useful (and pretty!) audio visualizer for musicians
 
+[![Video: Chromaphone on Android](placeholder-WIP)](https://www.youtube.com/watch?v=eVlAu86uFdM)
+
+[![Video: Chromaphone on Desktop](placeholder-WIP)](https://www.youtube.com/watch?v=0XlLdKYJeAA)
+
 # Build instructions
 Chromaphone has only been built in the Windows environment using Qt Creator (version 9.0.1). To build, please install the following:
 
