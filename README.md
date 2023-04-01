@@ -5,11 +5,11 @@ A useful (and pretty!) audio visualizer for musicians
 
 Video - Desktop version:
 
-[![Video: Chromaphone on Desktop](https://i9.ytimg.com/vi_webp/eVlAu86uFdM/mq2.webp?sqp=CNiljqAG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFAgZShKMA8=&rs=AOn4CLDmsBlytnTxngEMChBWleH-kRvVRQ)](https://www.youtube.com/watch?v=eVlAu86uFdM)
+[![Video: Chromaphone on Desktop](http://simonbielman.com/portfolio/chromaphone/Chromaphone_Screenshot_Desktop.png)](https://www.youtube.com/watch?v=eVlAu86uFdM)
 
 Video - Android version (old as of 2023-03-04):
 
-[![Video: Chromaphone on Android](https://i9.ytimg.com/vi_webp/0XlLdKYJeAA/mq2.webp?sqp=COzIjqAG-oaymwEmCMACELQB8quKqQMa8AEB-AH-BIAC4AKKAgwIABABGFEgWihlMA8=&rs=AOn4CLDn9n4x0zHGyKH1tou0Mvavd5O7_Q)](https://www.youtube.com/watch?v=0XlLdKYJeAA)
+[![Video: Chromaphone on Android](http://simonbielman.com/portfolio/chromaphone/Chromaphone_Screenshot_Android.png)](https://www.youtube.com/watch?v=0XlLdKYJeAA)
 
 # What is Chromaphone?
 
