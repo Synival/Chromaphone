@@ -2,8 +2,8 @@
 // --------------
 // Frequency data for a pitch contained in a Piano. Used to construct PianoKey's.
 
-#ifndef PITCH_QT_PIANOPITCH_HPP_INCLUDED
-#define PITCH_QT_PIANOPITCH_HPP_INCLUDED
+#ifndef PITCH_QT_PIANO_PITCH_HPP_INCLUDED
+#define PITCH_QT_PIANO_PITCH_HPP_INCLUDED
 
 #include "PianoConstants.hpp"
 
@@ -38,4 +38,4 @@ private:
     const double _freq;
 };
 
-#endif // PITCH_QT_PIANOPITCH_HPP_INCLUDED
+#endif // PITCH_QT_PIANO_PITCH_HPP_INCLUDED

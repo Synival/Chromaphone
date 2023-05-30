@@ -2,6 +2,8 @@
 // -------------------
 // A physical portion of a PianoKey which corresponds to a specific frequency range.
 
+#include "PianoKeySection.hpp"
+
 #include <cmath>
 
 #pragma GCC diagnostic push
@@ -12,8 +14,6 @@
 
 #include "PianoKey.hpp"
 #include "Utils.hpp"
-
-#include "PianoKeySection.hpp"
 
 PianoKeySection::PianoKeySection(PianoKey &key, const sectionRange_t &range) :
     _key(key),
@@ -54,8 +54,10 @@ QColor PianoKeySection::createColor() const
 #if 1
     // Colors, arranged in a rainbow order in the circle of fifths
     double hue = usefulFMod((double) _midiPitch / (double) MAX_PITCH_CLASSES, 1.00);
+/*
     if (_key.getPitch().getMidiPitch() % 2 == 1)
         hue = usefulFMod(hue + 0.50, 1.00);
+*/
 #else
     // Pretty blue!
     double hue = 210.00 / 360.00;
@@ -63,7 +65,7 @@ QColor PianoKeySection::createColor() const
 
     // Desaturate colors that are closer to the edge (i.e, less in-tune)
     double pitchOffset = usefulFMod(_midiPitch + 0.50, 1.00) - 0.50;
-    double precision = 1.00 - std::abs(pitchOffset) * 2.00;
+    double precision = 1.00; // - std::abs(pitchOffset) * 2.00;
 
     color.setHslF(hue, 1.00 * precision, 0.25 * precision + 0.25);
     return color;

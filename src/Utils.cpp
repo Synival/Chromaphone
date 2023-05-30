@@ -2,12 +2,12 @@
 // ---------
 // Handy utility functions that can be used anywhere.
 
+#include "Utils.hpp"
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QColor>
 #pragma GCC diagnostic pop
-
-#include "Utils.hpp"
 
 QColor mixColors(const QColor &color1, const QColor &color2, double mix)
 {

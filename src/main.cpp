@@ -2,6 +2,8 @@
 // --------
 // Application entry point.
 
+#include "MainWindow.hpp"
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QApplication>
@@ -10,8 +12,6 @@
     #include <QJniEnvironment>
 #endif
 #pragma GCC diagnostic pop
-
-#include "MainWindow.hpp"
 
 int main(int argc, char *argv[])
 {

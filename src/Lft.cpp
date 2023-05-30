@@ -2,6 +2,8 @@
 // -------
 // Interface for using the LFT library.
 
+#include "Lft.hpp"
+
 #include <QtDebug>
 
 #include "../lft/api/signal_profile.hpp"
@@ -14,8 +16,6 @@
 
 #include "LftConstants.hpp"
 #include "Utils.hpp"
-
-#include "Lft.hpp"
 
 // Macro for debugging so we can use __func__
 #define DEBUG() \

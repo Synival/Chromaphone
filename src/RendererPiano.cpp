@@ -2,6 +2,8 @@
 // -----------------
 // Renderer for LFT results which draws a piano with pretty colors and highlights.
 
+#include "RendererPiano.hpp"
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QWidget>
@@ -11,8 +13,6 @@
 #pragma GCC diagnostic pop
 
 #include "../lft/api/transform_results.hpp"
-
-#include "RendererPiano.hpp"
 
 RendererPiano::RendererPiano(QWidget &widget) :
     _widget(widget),

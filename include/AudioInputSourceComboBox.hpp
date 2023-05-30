@@ -2,8 +2,8 @@
 // -----------------------------
 // QComboBox-derived class for selecting an audio input source.
 
-#ifndef PITCH_QT_LOG_AUDIOINPUTSOURCECOMBOBOX_HPP_INCLUDED
-#define PITCH_QT_LOG_AUDIOINPUTSOURCECOMBOBOX_HPP_INCLUDED
+#ifndef PITCH_QT_AUDIO_INPUT_SOURCE_COMBO_BOX_HPP_INCLUDED
+#define PITCH_QT_AUDIO_INPUT_SOURCE_COMBO_BOX_HPP_INCLUDED
 
 #include <memory>
 
@@ -96,4 +96,4 @@ private:
     int _refreshingItems = 0;
 };
 
-#endif // PITCH_QT_LOG_AUDIOINPUTSOURCECOMBOBOX_HPP_INCLUDED
+#endif // PITCH_QT_AUDIO_INPUT_SOURCE_COMBO_BOX_HPP_INCLUDED

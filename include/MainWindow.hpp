@@ -2,8 +2,8 @@
 // --------------
 // The main window created at application launch.
 
-#ifndef PITCH_QT_MAINWINDOW_HPP_INCLUDED
-#define PITCH_QT_MAINWINDOW_HPP_INCLUDED
+#ifndef PITCH_QT_MAIN_WINDOW_HPP_INCLUDED
+#define PITCH_QT_MAIN_WINDOW_HPP_INCLUDED
 
 #include <memory>
 
@@ -12,9 +12,10 @@
 #include <QMainWindow>
 #include <QAbstractButton>
 #include <QTimer>
+#include <QAudioDevice>
 #pragma GCC diagnostic pop
 
-#include "Lft.hpp"
+#include "SharedAudioData.hpp"
 
 // Forward declarations
 namespace Ui {
@@ -24,11 +25,11 @@ namespace Ui {
 class QAudioDevice;
 class QAudioSource;
 class QIODevice;
+class QThread;
+class AudioWorker;
+class LftWorker;
 
 class log_transformer_filter_i;
-
-template<typename T>
-class transform_results;
 
 // The main window created at application launch.
 class MainWindow : public QMainWindow
@@ -41,28 +42,26 @@ public:
 
 private slots:
     void onCloseButtonClicked(bool checked);
-    void onAudioInputStreamReadyRead();
-    void onInputDeviceChanged(QAudioDevice *device);
     void onMagnitudeValueChanged(int value);
     void onRenderTimerTimeout();
     void onRenderAreaClicked();
+    void onLftResultsUpdated();
+    void onComboBoxInputDeviceChanged(QAudioDevice *device);
+
+signals:
+    void readyForNewLftResults();
+    void inputDeviceChanged(QAudioDevice device);
 
 private:
-    void updateLft();
-    void updateInputDevice(QAudioDevice *device);
+    std::unique_ptr<Ui::MainWindow> _ui {};
+    std::unique_ptr<QThread> _audioThread {};
+    std::unique_ptr<QThread> _lftThread {};
+    AudioWorker *_audioWorker = nullptr; // Lifetime managed in _audioThread. Do not manually delete or access after _audioThread has been deleted.
+    LftWorker *_lftWorker = nullptr;     // Lifetime managed in _lftThread. Do not manually delete or access after _lftThread has been deleted.
+    SharedAudioData _audioData {};
 
-    std::unique_ptr<Ui::MainWindow> _ui;
-
-    std::unique_ptr<QAudioSource> _audioSource;
-    QIODevice *_audioInputStream;
-
-    Lft _lft;
-    double _magnitude;
-
-    std::unique_ptr<transform_results<double>> _lftResults;
-    QTimer _renderTimer;
-
-    mutable bool _needsLftUpdate = true;
+    QTimer _renderTimer {};
+    bool _renderNecessary = true;
 };
 
-#endif // PITCH_QT_MAINWINDOW_HPP_INCLUDED
+#endif // PITCH_QT_MAIN_WINDOW_HPP_INCLUDED

@@ -2,6 +2,8 @@
 // --------------
 // A widget which renders LFT results using a Renderer of choice.
 
+#include "RenderArea.hpp"
+
 #include <iostream>
 #include <chrono>
 
@@ -18,8 +20,6 @@
 
 #include "RendererSimple.hpp"
 #include "RendererPiano.hpp"
-
-#include "RenderArea.hpp"
 
 // TODO: this shouldn't be hard-coded :(
 using DEFAULT_RENDERER = RendererPiano; //RendererSimple;
@@ -38,7 +38,10 @@ RenderArea::~RenderArea()
 {}
 
 void RenderArea::setResults(const transform_results<double> &results)
-    { _results = std::make_unique<transform_results<double>>(transform_results<double>(results)); }
+    { _results = std::make_unique<transform_results<double>>(results); }
+
+void RenderArea::setResults(transform_results<double> &&results)
+    { _results = std::make_unique<transform_results<double>>(std::move(results)); }
 
 void RenderArea::setStats(const log_transform_stats &stats)
     { _renderer->setStats(stats); }

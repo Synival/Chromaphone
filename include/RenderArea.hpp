@@ -34,6 +34,7 @@ public:
     ~RenderArea();
 
     void setResults(const transform_results<double> &results);
+    void setResults(transform_results<double> &&results);
     void setStats(const log_transform_stats &stats);
 
 signals:

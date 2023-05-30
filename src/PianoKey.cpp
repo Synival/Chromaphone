@@ -2,6 +2,8 @@
 // ------------
 // An individual key used in the Piano class.
 
+#include "PianoKey.hpp"
+
 #include <cmath>
 
 #pragma GCC diagnostic push
@@ -13,8 +15,6 @@
 #include "Piano.hpp"
 #include "PianoKeySection.hpp"
 #include "Utils.hpp"
-
-#include "PianoKey.hpp"
 
 PianoPitch &PianoKey::getPitch()
     { return _piano.getPitch(_pitchIndex); }

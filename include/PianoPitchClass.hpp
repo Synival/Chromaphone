@@ -2,8 +2,8 @@
 // -------------------
 // Data for a class of pitch (e.g, C, C#, D, etc.) for a piano.
 
-#ifndef PITCH_QT_PIANOPITCHCLASS_HPP_INCLUDED
-#define PITCH_QT_PIANOPITCHCLASS_HPP_INCLUDED
+#ifndef PITCH_QT_PIANO_PITCH_CLASS_HPP_INCLUDED
+#define PITCH_QT_PIANO_PITCH_CLASS_HPP_INCLUDED
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
@@ -61,4 +61,4 @@ private:
     const int _offset;
 };
 
-#endif // PITCH_QT_PIANOPITCHCLASS_HPP_INCLUDED
+#endif // PITCH_QT_PIANO_PITCH_CLASS_HPP_INCLUDED

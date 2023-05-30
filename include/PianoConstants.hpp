@@ -2,8 +2,8 @@
 // ------------------
 // Default parameters for the Piano class and its child classes.
 
-#ifndef PITCH_QT_PIANOCONSTANTS_HPP_INCLUDED
-#define PITCH_QT_PIANOCONSTANTS_HPP_INCLUDED
+#ifndef PITCH_QT_PIANO_CONSTANTS_HPP_INCLUDED
+#define PITCH_QT_PIANO_CONSTANTS_HPP_INCLUDED
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
@@ -30,4 +30,4 @@ constexpr int KEYBOARD_BORDER = 1;
 
 using sectionRange_t = std::pair<double /*low*/, double /*high*/>;
 
-#endif // PITCH_QT_PIANOCONSTANTS_HPP_INCLUDED
+#endif // PITCH_QT_PIANO_CONSTANTS_HPP_INCLUDED

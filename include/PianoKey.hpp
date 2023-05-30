@@ -2,8 +2,8 @@
 // ------------
 // An individual key used in the Piano class.
 
-#ifndef PITCH_QT_PIANOKEY_HPP_INCLUDED
-#define PITCH_QT_PIANOKEY_HPP_INCLUDED
+#ifndef PITCH_QT_PIANO_KEY_HPP_INCLUDED
+#define PITCH_QT_PIANO_KEY_HPP_INCLUDED
 
 #include <map>
 
@@ -91,4 +91,4 @@ private:
     mutable std::map<sectionRange_t, PianoKeySection> _sectionMap {};
 };
 
-#endif // PITCH_QT_PIANOKEY_HPP_INCLUDED
+#endif // PITCH_QT_PIANO_KEY_HPP_INCLUDED

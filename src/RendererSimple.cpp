@@ -2,6 +2,8 @@
 // ------------------
 // Renderer for LFT results in a simple graph format.
 
+#include "RendererSimple.hpp"
+
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
 #include <QWidget>
@@ -13,8 +15,6 @@
 #include "../lft/api/transform_results.hpp"
 
 #include "Utils.hpp"
-
-#include "RendererSimple.hpp"
 
 RendererSimple::RendererSimple(QWidget &widget) :
     _widget(widget)

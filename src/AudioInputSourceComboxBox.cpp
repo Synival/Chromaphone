@@ -2,6 +2,8 @@
 // -----------------------------
 // QComboBox-derived class for selecting an audio input source.
 
+#include "AudioInputSourceComboBox.hpp"
+
 #include <stdexcept>
 
 #pragma GCC diagnostic push
@@ -12,8 +14,6 @@
 #pragma GCC diagnostic pop
 
 #include "Utils.hpp"
-
-#include "AudioInputSourceComboBox.hpp"
 
 // NOTE: change these if the combo box order changes!!
 //constexpr int DEVICE_INDEX_NONE = 1;

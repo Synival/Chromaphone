@@ -2,6 +2,8 @@
 // ---------
 // Implementation of a piano for any visualizer that would like one.
 
+#include "Piano.hpp"
+
 #include <cmath>
 #include <algorithm>
 
@@ -15,8 +17,6 @@
 #include "PianoPitchClass.hpp"
 #include "PianoKey.hpp"
 #include "Utils.hpp"
-
-#include "Piano.hpp"
 
 Piano::Piano() :
     _pitchClasses(makePitchClasses()),

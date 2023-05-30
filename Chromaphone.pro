@@ -34,8 +34,10 @@ HEADERS += \
     ../lft/api/log_transformer_filter_linearize.hpp \
     ../lft/api/log_transformer_filter_partial_normalize.hpp \
     include/AudioInputSourceComboBox.hpp \
+    include/AudioWorker.hpp \
     include/Lft.hpp \
     include/LftConstants.hpp \
+    include/LftWorker.hpp \
     include/MainWindow.hpp \
     include/Piano.hpp \
     include/PianoConstants.hpp \
@@ -47,6 +49,7 @@ HEADERS += \
     include/Renderer.hpp \
     include/RendererPiano.hpp \
     include/RendererSimple.hpp \
+    include/SharedAudioData.hpp \
     include/Utils.hpp \
     ../lft/api/common.hpp \
     ../lft/api/factories.hpp \
@@ -76,13 +79,16 @@ SOURCES += \
     ../lft/src/log_transformer_filter_linearize.cpp \
     ../lft/src/log_transformer_filter_partial_nomalize.cpp \
     src/AudioInputSourceComboxBox.cpp \
+    src/AudioWorker.cpp \
     src/Lft.cpp \
+    src/LftWorker.cpp \
     src/Piano.cpp \
     src/PianoKey.cpp \
     src/PianoKeySection.cpp \
     src/PianoPitch.cpp \
     src/RendererPiano.cpp \
     src/RendererSimple.cpp \
+    src/SharedAudioData.cpp \
     src/Utils.cpp \
     src/main.cpp \
     src/MainWindow.cpp \

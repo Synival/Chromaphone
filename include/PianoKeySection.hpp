@@ -2,8 +2,8 @@
 // -------------------
 // A physical portion of a PianoKey which corresponds to a specific frequency range.
 
-#ifndef PITCH_QT_PIANOKEYSECTION_HPP_INCLUDED
-#define PITCH_QT_PIANOKEYSECTION_HPP_INCLUDED
+#ifndef PITCH_QT_PIANO_KEY_SECTION_HPP_INCLUDED
+#define PITCH_QT_PIANO_KEY_SECTION_HPP_INCLUDED
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wattributes"
@@ -46,4 +46,4 @@ private:
     mutable double _volume = 0;
 };
 
-#endif // PITCH_QT_PIANOKEYSECTION_HPP_INCLUDED
+#endif // PITCH_QT_PIANO_KEY_SECTION_HPP_INCLUDED
