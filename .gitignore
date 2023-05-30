@@ -18,3 +18,5 @@
 /deploy.bat.bak
 /deploy
 *.keystore
+/android
+/resources
