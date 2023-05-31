@@ -32,8 +32,7 @@ std::vector<PianoPitchClass> Piano::makePitchClasses()
     constexpr PianoPitchClassPosition lower = PianoPitchClassPosition::Lower;
 
     // TODO: make this an option!!
-#define PIANO_MODE 0
-#if PIANO_MODE == 0
+#if PIANO_KEY_LAYOUT == 0
     // Standard piano keyboard
     const static PianoPitchClass _defaultPitches[MAX_PITCH_CLASSES] = {
         { *this,  0, lower, KEY_LOWER_WIDTH, KEY_LOWER_COLOR },     // C
@@ -49,7 +48,7 @@ std::vector<PianoPitchClass> Piano::makePitchClasses()
         { *this, 10, upper, KEY_UPPER_WIDTH, KEY_UPPER_COLOR, 1 },  // Bb
         { *this, 11, lower, KEY_LOWER_WIDTH, KEY_LOWER_COLOR },     // B
     };
-#elif PIANO_MODE == 1
+#elif PIANO_KEY_LAYOUT == 1
     // Wholetone piano keyboard
     const static PianoPitchClass _defaultPitches[MAX_PITCH_CLASSES] = {
         { *this,  0, lower, KEY_LOWER_WIDTH, KEY_LOWER_COLOR },     // C
@@ -65,7 +64,7 @@ std::vector<PianoPitchClass> Piano::makePitchClasses()
         { *this, 10, lower, KEY_LOWER_WIDTH, KEY_UPPER_COLOR },     // Bb
         { *this, 11, upper, KEY_UPPER_WIDTH, KEY_LOWER_COLOR, 0 },  // B
     };
-#elif PIANO_MODE == 2
+#elif PIANO_KEY_LAYOUT == 2
     // No upper keys
     const static PianoPitchClass _defaultPitches[MAX_PITCH_CLASSES] = {
         { *this,  0, lower, KEY_LOWER_WIDTH, KEY_LOWER_COLOR }, // C

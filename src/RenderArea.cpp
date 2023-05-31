@@ -18,11 +18,16 @@
 #endif
 #pragma GCC diagnostic pop
 
-#include "RendererSimple.hpp"
-#include "RendererPiano.hpp"
-
 // TODO: this shouldn't be hard-coded :(
-using DEFAULT_RENDERER = RendererPiano; //RendererSimple;
+// #define USE_RENDER_SIMPLE
+
+#ifdef USE_RENDER_SIMPLE
+    #include "RendererSimple.hpp"
+    using DEFAULT_RENDERER = RendererSimple;
+#else
+    #include "RendererPiano.hpp"
+    using DEFAULT_RENDERER = RendererPiano;
+#endif
 
 RenderArea::RenderArea(QWidget *parent) :
     QWidget(parent),

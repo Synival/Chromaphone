@@ -50,24 +50,31 @@ QColor PianoKeySection::createColor() const
 {
     QColor color;
 
-    // TODO: maybe some way to change this as a user???
-#if 1
+#if PIANO_KEY_COLOR_MODE == 0
     // Colors, arranged in a rainbow order in the circle of fifths
     double hue = usefulFMod((double) _midiPitch / (double) MAX_PITCH_CLASSES, 1.00);
-/*
     if (_key.getPitch().getMidiPitch() % 2 == 1)
         hue = usefulFMod(hue + 0.50, 1.00);
-*/
-#else
-    // Pretty blue!
-    double hue = 210.00 / 360.00;
-#endif
 
     // Desaturate colors that are closer to the edge (i.e, less in-tune)
-    double pitchOffset = usefulFMod(_midiPitch + 0.50, 1.00) - 0.50;
-    double precision = 1.00; // - std::abs(pitchOffset) * 2.00;
+#elif PIANO_KEY_COLOR_MODE == 1
+    // Colors, arranged in a rainbow order chromatically.
+    double hue = usefulFMod((double) _midiPitch / (double) MAX_PITCH_CLASSES, 1.00);
+#elif PIANO_KEY_COLOR_MODE == 2
+    // Pretty blue!
+    static constexpr double hue = 210.00 / 360.00;
+#endif
 
-    color.setHslF(hue, 1.00 * precision, 0.25 * precision + 0.25);
+#ifdef PIANO_KEY_DESATURATE_NON_EQUAL_TEMPERMENT_TONES
+    double precision = 1.00 - (std::abs(usefulFMod(_midiPitch + 0.50, 1.00) - 0.50)) * 2.00;
+    double saturation = precision;
+    double luminosity = 0.25 * precision + 0.25;
+#else
+    static constexpr double saturation = 1.00;
+    static constexpr double luminosity = 0.50;
+#endif
+
+    color.setHslF(hue, saturation, luminosity);
     return color;
 }
 

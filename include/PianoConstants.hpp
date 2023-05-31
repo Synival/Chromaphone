@@ -28,6 +28,19 @@ const QColor KEY_UPPER_COLOR = QColor(16, 16, 16);
 constexpr int KEY_GAP = 2;
 constexpr int KEYBOARD_BORDER = 1;
 
+// 0: Pretty rainbow along circle of fifths
+// 1: Pretty rainbow chromatically
+// 2: Pretty blue
+#define PIANO_KEY_COLOR_MODE 0
+
+// 0: Standard piano keyboard layout
+// 1: Wholestone keyboard layout
+// 2: Single-tier keyboard layout
+#define PIANO_KEY_LAYOUT 0
+
+// Enable to show "out-of-tune" notes as white
+#define PIANO_KEY_DESATURATE_NON_EQUAL_TEMPERMENT_TONES
+
 using sectionRange_t = std::pair<double /*low*/, double /*high*/>;
 
 #endif // PITCH_QT_PIANO_CONSTANTS_HPP_INCLUDED
